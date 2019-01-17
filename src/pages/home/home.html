@@ -24,9 +24,15 @@
         <ion-col>
           <h3>{{c.titulo}}</h3>
           <p>{{c.precio}}</p>
-          <button ion-button  (click)="favorite(c)" color= "secondary">
-            Agregar a favoritos
-          </button>
+          
+              <button ion-button  (click)="favorite(c)" color= "secondary">
+                Agregar a favoritos
+              </button>
+           
+              <button ion-button (click)="goInfo(c)">
+                Ver detalles
+              </button>
+           
         </ion-col>
       </ion-row>
     </ion-card>

@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import {InfoPage} from '../info/info';
+
 /**
- * Generated class for the FavoritesPage page.
+ * Generated class for the InfoPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,21 +10,17 @@ import {InfoPage} from '../info/info';
 
 @IonicPage()
 @Component({
-  selector: 'page-favorites',
-  templateUrl: 'favorites.html',
+  selector: 'page-info',
+  templateUrl: 'info.html',
 })
-export class FavoritesPage {
-  favs=[];
-  info = InfoPage;
+export class InfoPage {
+  c={};
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.favs=this.navParams.get("favs");
+    this.c=this.navParams.get("h");
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad FavoritesPage');
+    console.log('ionViewDidLoad InfoPage');
   }
 
-  goInfo(c: any) {
-    this.navCtrl.push(this.info, { h: c });
-  }
 }
